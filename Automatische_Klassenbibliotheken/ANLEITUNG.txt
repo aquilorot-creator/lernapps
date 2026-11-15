@@ -1,0 +1,5 @@
+Einmalige Einrichtung: ZIP entpacken. Die 13 Klassenordner direkt in das Hauptverzeichnis des GitHub-Projekts lernapps hochladen und mit Commit changes speichern. Vorhandene index.html-Dateien werden aktualisiert. Apps bleiben erhalten. Alternativ die separat gelieferte index.html in einen einzelnen Klassenordner hochladen.
+
+Danach: HTML-Apps direkt in den gewünschten Klassenordner hochladen. Nach erfolgreicher GitHub-Pages-Veröffentlichung erscheinen sie automatisch. Nicht index.html nennen: Dieser Name gehört der Übersicht. Namen mit Unterstrichen sind möglich. Nur direkt im jeweiligen Ordner liegende .html- und .htm-Dateien werden gelistet.
+
+Voraussetzung: Der vorhandene GitHub-Pages-Zweig-Build verwendet Jekyll. Keine .nojekyll-Datei im Hauptverzeichnis. Die drei Bindestriche am Dateianfang müssen erhalten bleiben. Keine GitHub-API, keine Tokens und keine zusätzlichen Einstellungen erforderlich. Die Dateien enthalten keine externen Schriftarten oder Bibliotheken.
