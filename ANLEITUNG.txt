@@ -1,0 +1,18 @@
+EINRICHTUNG AUF GITHUB
+
+1. ZIP-Datei auf dem Computer entpacken.
+2. Im GitHub-Projekt lernapps: Add file > Upload files.
+3. Den INHALT des entpackten Ordners hochladen: index.html, bibliothek.css und alle 13 Klassenordner. Keinen zusätzlichen übergeordneten Ordner hochladen.
+4. Commit changes anklicken. Bestehende App-Dateien und README.md nicht löschen.
+5. Nach der Veröffentlichung https://aquilorot-creator.github.io/lernapps/ öffnen.
+
+KLASSEN BESTÜCKEN
+Die Klassenbibliotheken sind zunächst leer, da noch keine Zuordnung der Apps vorliegt. Die beiden vorhandenen Latein-Apps sind auf der Hauptseite verlinkt; ihre Dateien sind nicht in diesem Paket enthalten und müssen im Projekt liegen bleiben.
+
+Neue HTML-App ins Hauptverzeichnis von lernapps hochladen. Anschließend im betreffenden Klassenordner index.html bearbeiten und unter dem HTML-Kommentar eine Karte ergänzen:
+
+<a class="card" href="../DATEINAME.html"><strong>Titel der App</strong><span>Übung öffnen →</span></a>
+
+DATEINAME.html exakt ersetzen (Groß-/Kleinschreibung beachten). Den Block <div class="empty">...</div> bei der ersten App entfernen. Dieselbe App kann in mehreren Klassen verlinkt werden.
+
+Alle Seiten sind öffentlich. Die Ordner bieten keinen Zugriffsschutz.
