@@ -1,0 +1,17 @@
+NEUSTART DER BIBLIOTHEKSSEITEN
+
+Keine Lernapps löschen! Dieses Paket enthält nur die Hauptübersicht, die 13 Klassenübersichten und bibliothek.css.
+
+1. ZIP entpacken.
+2. GitHub-Projekt lernapps öffnen, Reiter Code. Im Hauptverzeichnis bleiben.
+3. Add file > Upload files.
+4. Den INHALT des entpackten Ordners hochladen: index.html, bibliothek.css und die 13 Klassenordner. Nicht den umschließenden Ordner und nicht das ZIP hochladen.
+5. Commit changes bestätigen.
+6. Unter Actions auf eine erfolgreiche Veröffentlichung warten.
+7. https://aquilorot-creator.github.io/lernapps/index.html öffnen.
+
+Vorhandene gleichnamige Übersichtsdateien werden ersetzt. Apps bleiben erhalten. Der versehentlich hochgeladene Ordner Automatische_Klassenbibliotheken wird nicht verwendet und kann vorerst liegen bleiben.
+
+Danach Apps als .html oder .htm direkt in den jeweiligen Klassenordner hochladen und speichern. Nicht index.html nennen. Neue Apps werden bei der nächsten erfolgreichen Veröffentlichung automatisch verlinkt. App-Namen werden aus den Dateinamen gebildet. Zusätzliche Unterordner werden nicht durchsucht.
+
+Voraussetzungen: GitHub Pages mit Deploy from a branch, main, / (root), wie bisher. Keine .nojekyll-Datei im Hauptverzeichnis. Die YAML-Zeilen (---) am Anfang der Klassenindexdateien erhalten. Die Seiten sind für das Projekt lernapps eingerichtet.

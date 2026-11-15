@@ -1,47 +1,32 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Latein – Klasse 11</title>
-
-  <link rel="stylesheet" href="/lernapps/bibliothek.css">
-</head>
-
-<body>
-  <main>
-    <nav>
-      <a href="/lernapps/">← Alle Bibliotheken</a>
-    </nav>
-
-    <h1>Latein · Klasse 11</h1>
-
-    <p class="muted">
-      Hier findest du die Lernapps für deinen Lateinkurs.
-    </p>
-
-    <div class="grid">
-      <a
-        class="card"
-        href="/lernapps/latein-11/Liebe_an_der_Wand_Lernapp.html"
-      >
-        <strong>Liebe an der Wand</strong>
-        <span>Lernapp öffnen →</span>
-      </a>
-
-      <a
-        class="card"
-        href="/lernapps/latein-11/Ovid_Leben_Werke_Lernapp.html"
-      >
-        <strong>Ovid – Leben und Werke</strong>
-        <span>Lernapp öffnen →</span>
-      </a>
-    </div>
-
-    <footer>
-      Lernbibliothek · Latein und Geschichte
-    </footer>
-  </main>
-</body>
-</html>
+---
+layout: null
+---
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Latein · Klasse 11</title><link rel="stylesheet" href="/lernapps/bibliothek.css"></head><body><main><nav><a href="/lernapps/">← Alle Bibliotheken</a></nav><h1>Latein · Klasse 11</h1><p>Wähle eine Lernapp aus.</p>{% assign target_dir = '/latein-11/' %}
+{% assign count = 0 %}
+{% assign static_apps = site.static_files | sort: 'name' %}
+<div class="grid">
+{% for app in static_apps %}
+{% assign ext = app.extname | downcase %}
+{% assign folder = app.path | remove: app.name %}
+{% assign filename = app.name | downcase %}
+{% if folder == target_dir %}
+{% if ext == '.html' or ext == '.htm' %}
+{% unless filename == 'index.html' or filename == 'index.htm' %}
+{% assign count = count | plus: 1 %}
+<a class="card" href="/lernapps{{ app.path | uri_escape | escape }}"><strong>{{ app.basename | replace: '_', ' ' | replace: '-', ' ' | escape }}</strong><span>Lernapp öffnen →</span></a>
+{% endunless %}{% endif %}{% endif %}
+{% endfor %}
+{% assign rendered_apps = site.pages | sort: 'name' %}
+{% for app in rendered_apps %}
+{% assign ext = app.name | split: '.' | last | downcase %}
+{% assign filename = app.name | downcase %}
+{% if app.dir == target_dir %}
+{% if ext == 'html' or ext == 'htm' %}
+{% unless filename == 'index.html' or filename == 'index.htm' %}
+{% assign count = count | plus: 1 %}
+{% assign label = app.name | replace: '.html', '' | replace: '.htm', '' | replace: '_', ' ' | replace: '-', ' ' %}
+<a class="card" href="/lernapps{{ app.url | uri_escape | escape }}"><strong>{{ app.title | default: label | escape }}</strong><span>Lernapp öffnen →</span></a>
+{% endunless %}{% endif %}{% endif %}
+{% endfor %}</div>
+{% if count == 0 %}<p class="empty">Noch keine Apps vorhanden. Neue HTML-Apps direkt in diesen Klassenordner hochladen.</p>{% endif %}
+<p>{{ count }} Lernapp(s) · Automatisch bei jeder Veröffentlichung aktualisiert.</p><footer>Lernbibliothek · Latein und Geschichte</footer></main></body></html>
